@@ -3,7 +3,7 @@
 
 
 // My Main94.cc to produce photo-nuclear dijet production set up 
-//Modified from  test79.cc 
+//Modified from  test78.cc Ilkka Helenius
 
 
 
