@@ -67,8 +67,8 @@ int main() {
   pythia.readString("Beams:frameType = 2");
   pythia.readString("Beams:idA = 2212");
   pythia.readString("Beams:idB = 2212");
-  pythia.readString("Beams:eA = 2500."); /// Beam "A" will be the one to associate the photon flux
-  pythia.readString("Beams:eB = 2500.");///Check energy****
+  pythia.readString("Beams:eA = 4080."); /// Beam "A" will be the one to associate the photon flux
+  pythia.readString("Beams:eB = 4080.");///Check energy****
   pythia.readString("PDF:beamA2gamma = on"); /// Enables photon sub-beam from beam particle "A"
   pythia.readString("PDF:Proton2gammaSet = 0"); /// this is to use an externally provided photon flux. we'll associate the lead flux defined above to the proton beam A, because there is not flux from heavy ions internally defined.  
   pythia.readString("PDF:beam2gammaApprox = 2"); /// Estimate optimized for ultraperipheral heavy-ion collisions for photon flux sampling. it is optimized for pPb collisions where the lead emits the photon. 
