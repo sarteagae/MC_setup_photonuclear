@@ -74,7 +74,7 @@ int main() {
     
    
 
-    // p Pb energy.  energy per nucleon  
+    // p,Pb energy.  energy per nucleon  
     pythia.readString("Beams:eA = 6500");  // Beam going +z. In this case proton 
     pythia.readString("Beams:eB = 2560");  // Beam going -z . Pb going left  
     
@@ -103,10 +103,6 @@ int main() {
     pythia.readString("PhotonParton:all = on"); // all q, qbar
     
     pythia.readString("PartonLevel:MPI = off"); // 
-
-  // Initialize the generator.
-//    pythia.readString("Random:setSeed = on");
-//    pythia.readString("Random:seed = 1");
     pythia.readString("HardQCD:all = on");
     pythia.readString("PhaseSpace:pTHatMin = 10.");
     
