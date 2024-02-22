@@ -21,7 +21,7 @@ using namespace Pythia8;
 
 using namespace std;
 
-///Adding photon-flux def
+/// Photon-flux def
 
 class Nucleus2gamma2 : public PDF {
 
@@ -68,9 +68,9 @@ int main() {
     pythia.readString("Next:numberShowEvent = 0");   //  default value
 
     // Beam parameters with heavy-ion optimized photon flux
-    pythia.readString("Beams:frameType = 2");    // to identify two beams
-    pythia.readString("Beams:idA = 2212"); //Proton(2212)  
-    pythia.readString("Beams:idB = 2212"); //Proton (2212) 
+    pythia.readString("Beams:frameType = 2");    
+    pythia.readString("Beams:idA = 2212");  
+    pythia.readString("Beams:idB = 2212");  
     
    
 
@@ -97,7 +97,7 @@ int main() {
 
  //  pythia.readString("MultipartonInteractions:pT0Ref = 3.0"); do we need pT0ref?
     
-     // Photoproduction and relevant hard processes.
+     // Photoproduction.
     pythia.settings.mode("Photon:ProcessType", 0); // 0 is Mix of resolved-resolved, resolved- direct, direct-resolved,  direct- direct .   3 is the case direct-resolved. 
 
     pythia.readString("PhotonParton:all = on"); // all q, qbar
