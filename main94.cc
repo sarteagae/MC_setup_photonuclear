@@ -107,8 +107,8 @@ int main() {
     pythia.readString("PhaseSpace:pTHatMin = 10.");
     
    
-/********* Example settings for hard diffraction. ***********************//////
-// Comment these out if after for inclusive jets.
+/********* for difractive events include the lines below ***********************//////
+//
 /*  
    pythia.readString("PDF:PomSet = 8");
    pythia.readString("Diffraction:hardDiffSide = 0"); // 1 Check for diffraction on side A only. 2 para B, and 0 Check for diffraction on both side
@@ -135,7 +135,7 @@ int main() {
     
     // Create and open file for LHEF 3.0 output
     LHEF3FromPythia8 myLHEF3(&pythia.event, &pythia.info);
-    // Open a file on which LHEF events should be stored, and write header
+    // Open a file on which LHEF events should be stored
     myLHEF3.openLHEF("lhe_files_before_rm_headers/gamma_proton/gamma_proton_pPb_8p16TeV_test_file10.lhe");
     myLHEF3.setInit();
     myLHEF3.initLHEF();
@@ -154,7 +154,7 @@ int main() {
 //       if (pythia.info.isHardDiffractiveB()) ++nDiffB;
     
     }
-    // Statistics: full printout.
+    // Statistics.
     pythia.stat();
     // Write endtag. Overwrite initialization info with new cross sections.
     myLHEF3.closeLHEF(true);
